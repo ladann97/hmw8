@@ -1,0 +1,70 @@
+body {
+    background-color: #a0a86e;
+}
+.wrapper{
+    width: 250px;
+    height: 350px;
+    margin: 100px auto;
+    border-radius: 10px;
+    position: relative;
+}
+.box{
+    width: 270px;
+    height: 430px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 90% 90%;
+    border-radius: 20px;
+    transition: 1s;    
+}
+.box1{
+   
+    transform: rotate(-25deg);
+}
+.box2{
+   
+    transform: rotate(-10deg);
+}
+.box3{
+    
+    transform: rotate(5deg)
+}
+.box4{
+    
+    transform: rotate(20deg);
+
+}
+.box5{
+    
+    transform: rotate(35deg);
+}
+
+.box:hover ~ .box{
+    transform: rotate(100deg);
+}
+
+
+.wrapper > .box:last-child::before{
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    border-radius: 50%;
+    transform: translate(50% , 50%);
+    border: 1px solid gray;
+}
+
+.wrapper > .box:last-child::after{ 
+    content: "";
+    width: 18px;
+    height: 2px;
+    background-color: rgba(128, 128, 128, 0.5);
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    transform: translate(50% , 50%);
+}
